@@ -49,9 +49,7 @@ export default {
     name: 'login',
     data() {
         return {
-            form: {
-
-            },
+            form: {},
             rules: {
                 username: [
                     { required: true, message: '请输入用户名', trigger: 'blur' },

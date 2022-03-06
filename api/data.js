@@ -3,7 +3,7 @@ import axios from "./axios"
 export const getMenu = (param) => {
     return axios.request({
         url: '/permission/getMenu',
-        methods: 'post',            //原来是post
+        method: 'post',            
         data: param
     })
 }

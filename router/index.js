@@ -7,7 +7,7 @@ Vue.use(VueRouter)
 const routes = [
     {
         path: '/',
-        redirect: 'home',  //重定向，打开直接跳到home页面
+        redirect: 'login',  //重定向，打开直接跳到登录页面
         name: 'Main',
         component: () => import('../views/Main.vue'),
         children: [
