@@ -106,8 +106,8 @@ export default {
                 series: [],
             },
             echart: null
-        }   //return
-    },  //data
+        }   
+    },  
 
     computed: {
         options() {

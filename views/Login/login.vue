@@ -60,12 +60,7 @@ export default {
                     }
                 ],
                 password:  [
-                    { required: true, message: '请输入密码', trigger: 'blur' },
-                    // {
-                    //     min: 3,
-                    //     message: '用户名长度不能少于3位',
-                    //     trigger: 'blur'
-                    // }
+                    { required: true, message: '请输入密码', trigger: 'blur' }
                 ]
             }
         }
@@ -84,9 +79,6 @@ export default {
                     this.$message.warning(res.data.message)
                 }
             })
-            // const token = Mock.random.guid()        //报错的话random改成Random
-            // this.$store.commit('setToken', token)
-            // this.$router.push({ name: 'home'})
         }
     }
 }

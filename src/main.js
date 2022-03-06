@@ -15,13 +15,14 @@ Vue.config.productionTip = false
 Vue.use(ElementUI)
 
 Vue.prototype.$http = http
-// Vue.prototype.$confirm = MessageBox.confirm           //可去掉
 
 router.beforeEach((to, from, next) => {
   store.commit('getToken')
   const token = store.state.user.token
   if(!token && to.name !== 'login') {
     next({ name: 'login' })
+  } else if(token && to.name === 'login') {
+    next({ name: 'home' })
   } else {
     next()
   }
@@ -31,4 +32,7 @@ new Vue({
   store,
   router,
   render: h => h(App),
+  created() {
+    store.commit('addMenu', router)
+  }
 }).$mount('#app')

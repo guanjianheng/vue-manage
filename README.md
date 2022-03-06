@@ -1,5 +1,9 @@
 # vue-manage
+```
+通用后台管理
 
+首页和用户管理页面基本完成，商品管理已经其他页面还待完善。
+```
 ## Project setup
 ```
 npm install
