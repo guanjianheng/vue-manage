@@ -43,7 +43,7 @@
                 </el-option>
             </el-select>
         </el-form-item>
-        <el-form-item><slot><slot/></el-form-item>
+        <el-form-item><slot></slot></el-form-item>
     </el-form>
 </template>
 
