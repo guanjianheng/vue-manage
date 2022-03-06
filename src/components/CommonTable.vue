@@ -13,8 +13,10 @@
                 </template>
             </el-table-column>
             <el-table-column label="操作" min-width="180">
-                <el-button size="mini" @click="handleEdit">编辑</el-button>
-                <el-button size="mini" type="danger" @click="handleDelete">删除</el-button>
+                <template slot-scope="scope">
+                    <el-button size="mini" @click="handleEdit(scope.row)">编辑</el-button>
+                    <el-button size="mini" type="danger" @click="handleDelete(scope.row)">删除</el-button>
+                </template>               
             </el-table-column>
         </el-table>
         <el-pagination
@@ -44,14 +46,14 @@ export default {
         }
     },
     methods: {
-        handleEdit() {
-
+        handleEdit(row) {
+            this.$emit('edit', row)
         },
-        handleDelete() {
-
+        handleDelete(row) {
+            this.$emit('del', row)
         },
-        changePage() {
-
+        changePage(page) {
+            this.$emit('changePage', page)
         }
     }
 }
